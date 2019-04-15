@@ -1,0 +1,1174 @@
+<!DOCTYPE html style="height: 100%">
+<!--[if lt IE 7 ]> <html class="ie6 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8 lt-ie9" lang="en"> <![endif]-->
+<!--[if IE 9]>     <html class="ie9 lt-ie10" lang="en"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+
+<!-- Nice to see you took a peek here, hello -->
+<!-- send us an email at hello at goodbits dot io if you want to talk tech -->
+
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# business: http://ogp.me/ns/business#">
+    <meta http-equiv="x-ua-compatible" content="IE=Edge"/>
+    <meta charset="utf-8" />
+
+    <title>Elm Weekly — Issue #9</title>
+    <meta name="description" content="The wonderful world of the Elm programming language, in your inbox.
+" />
+    <meta name="author"      content="Brian Hicks">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta property="og:site_name"   content="Elm Weekly">
+    <meta property="og:title"       content="Elm Weekly — Issue #9">
+    <meta property="og:description" content="The wonderful world of the Elm programming language, in your inbox.
+">
+    <meta property="og:type"        content="website">
+      <meta property="og:image"     content="/uploads/landing_site/logo/6399/e47af011-7a52-4066-98cf-8b3e044ab33e.png">
+
+    <meta property="business:contact_data:street_address" content="PO Box 460" >
+    <meta property="business:contact_data:locality"       content="Cottleville" >
+    <meta property="business:contact_data:postal_code"    content="63338" >
+    <meta property="business:contact_data:country_name"   content="US" >
+
+    <meta name="twitter:title"       content="Elm Weekly — Issue #9">
+    <meta name="twitter:description" content="The wonderful world of the Elm programming language, in your inbox.
+">
+      <meta name="twitter:image:src" content="/uploads/landing_site/logo/6399/e47af011-7a52-4066-98cf-8b3e044ab33e.png">
+
+
+    <link id="feedLink" rel="alternate" type="application/rss+xml" title="RSS" href="../../../feed">
+
+      <link rel="shortcut icon" href="../../../icons/apple-touch-icon-72x72.png" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="../../../icons/apple-touch-icon.png" />
+  <link rel="apple-touch-icon" sizes="57x57" href="../../../icons/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="../../../icons/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="../../../icons/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="../../../icons/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="57x57" href="../../../icons/apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="../../../icons/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="../../../icons/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="../../../icons/apple-touch-icon-152x152.png" />
+  <meta name="msapplication-square70x70logo" content="/icons/smalltile.png" />
+  <meta name="msapplication-square150x150logo" content="/icons/mediumtile.png" />
+  <meta name="msapplication-wide310x150logo" content="/icons/widetile.png" />
+  <meta name="msapplication-square310x310logo" content="/icons/largetile.png" />
+
+
+    <link rel="stylesheet" media="screen" href="/assets/landing-sites-manifest-d5cbfad4c0be670966a5102f6debb69b.css" />
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="95ypAXnV4XzSl/JeyXQBg0c2K9N7dSIvhhzuzxzrZDSaxLYgfAwCvvR+W9QMocvO4XnVw7ztnyiEwtxTEBZBEQ==" />
+
+    <style>
+      .subscribe-form--image-wrapper {
+        background-image: url('issue-9.html');
+      }
+      .primary-background-color {
+        background-color: #596377 !important;
+      }
+      .primary-text-color {
+        color: #596377 !important;
+      }
+      .primary-border-color {
+        border-color: #596377 !important;
+      }
+      .secondary-background-color {
+        background-color: #ffffff !important;
+      }
+      .secondary-text-color {
+        color: #ffffff !important;
+      }
+      .secondary-border-color {
+        border-color: #ffffff !important;
+      }
+
+        .subscribe-form--image-wrapper:before {
+          opacity: 1;
+        }
+    </style>
+  </head>
+  <body class="newsletter_landing_site_issue newsletter_landing_site issue">
+    <div class="container-fluid">
+      
+
+      <div class="top">
+        <header>
+          <div class="row">
+            <div class="col-xs-2 col-sm-3 col-md-3">
+            </div>
+
+            <div class="col-xs-8 col-sm-6 col-md-6 text-center hidden-until-sticky mobile-hidden">
+              <p class="newsletter--name primary-text-color">
+                <a href="../../../index.html">Elm Weekly</a>
+              </p>
+            </div>
+
+            <div class="col-xs-10 col-sm-3 col-md-3 text-right hidden-until-sticky mobile-pull-right">
+                <a href="issue-9.html#subscribe-form" class="internal btn btn-primary btn-highlight primary-background-color secondary-text-color">Subscribe</a>
+            </div>
+          </div>
+        </header>
+
+        <div id="subscribe-form" class="row newsletter-header primary-background-color ">
+          <div class="subscribe-form--image-wrapper">
+          </div>
+
+          <div class="newsletter-header--content">
+            <div class="clearfix">
+              <div class="col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-2 col-lg-8 col-xl-offset-3 col-xl-6 text-center">
+                <h1 class="newsletter-header--name secondary-text-color">
+
+                      <img id="landing-site-logo" class="img-responsive newsletter-header--logo" src="/uploads/landing_site/logo/6399/e47af011-7a52-4066-98cf-8b3e044ab33e.png" alt="E47af011 7a52 4066 98cf 8b3e044ab33e" />
+
+                </h1>
+                <hr>
+                <h2 class="newsletter-header--description secondary-text-color">
+                  <p>The wonderful world of the <strong>Elm</strong> programming language, in your inbox.</p>
+
+                </h2>
+              </div>
+            </div>
+
+
+
+
+
+
+              <div class="subscribe-form-wrapper text-center">
+                <div class="subscribe-form-push">
+
+                  <form class="simple_form form-inline" novalidate="novalidate" id="new_subscriber" action="http://www.elmweekly.nl/subscribe" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="wU32be2Ra+EiEDd9V9B1UCqppkz3V2//3wuIJDgPsZesFelM6EiIIwT5nveSBb8djOZYXDDP0vjd1bq4NPKUsg==" />
+
+                    <div id="new_subscriber_form">
+                      <div class="input string optional subscriber_name form-group"><input class="string optional form-control secondary-text-color secondary-border-color" placeholder="Your Name" type="text" value="" name="subscriber[name]" id="subscriber_name" /></div>
+
+                      <div class="input email optional subscriber_email form-group"><input class="string email optional form-control secondary-text-color secondary-border-color" placeholder="Your Email" type="email" name="subscriber[email]" id="subscriber_email" /></div>
+
+                      <input type="submit" name="commit" value="Subscribe" class="btn btn btn-default btn-subscribe primary-text-color secondary-background-color secondary-border-color" data-show-recaptcha="true" />
+                    </div>
+
+                    <div id="new_subscriber_recaptcha" style="display:none;text-align:center">
+                      <h5>Confirm that you're not a robot:</h5>
+                      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<div class="g-recaptcha" data-sitekey="6LccoiYTAAAAAJMmnMVnFY7wieO7VpoKqDhyaLU9"></div>
+          <noscript>
+            <div style="width: 302px; height: 352px;">
+              <div style="width: 302px; height: 352px; position: relative;">
+                <div style="width: 302px; height: 352px; position: absolute;">
+                  <iframe
+                    src="https://www.google.com/recaptcha/api/fallback?k=6LccoiYTAAAAAJMmnMVnFY7wieO7VpoKqDhyaLU9"
+                    frameborder="0" scrolling="no"
+                    style="width: 302px; height:352px; border-style: none;">
+                  </iframe>
+                </div>
+                <div style="width: 250px; height: 80px; position: absolute; border-style: none;
+                  bottom: 21px; left: 25px; margin: 0px; padding: 0px; right: 25px;">
+                  <textarea id="g-recaptcha-response" name="g-recaptcha-response"
+                    class="g-recaptcha-response"
+                    style="width: 250px; height: 80px; border: 1px solid #c1c1c1;
+                    margin: 0px; padding: 0px; resize: none;" value="">
+                  </textarea>
+                </div>
+              </div>
+            </div>
+          </noscript>
+
+
+                      <input type="submit" name="commit" value="Subscribe" class="btn btn btn-default btn-recaptcha btn-subscribe primary-text-color secondary-background-color secondary-border-color" />
+                    </div>
+
+</form>                </div>
+              </div>
+
+
+              <div class="social_sharing secondary-background-color">
+                <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.elmweekly.nl/2016/04/07/issue-9">
+                  <i class="fi icon-facebook primary-text-color"></i>
+</a>                <a target="_blank" href="https://twitter.com/intent/tweet?text=Read+newsletter+Elm+Weekly+--++%E2%80%94+Issue+%239+http://www.elmweekly.nl/2016/04/07/issue-9">
+                  <i class="fi icon-twitter-bird primary-text-color"></i>
+</a>              </div>
+
+              <div class="archive-link-wrapper text-center">
+                <a class="secondary-text-color" href="../../../archive.html">Browse Previous Issues</a>
+              </div>
+          </div>
+        </div>
+
+        <div id="public-issue-reader">
+    <div class="row">
+      <div class="col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6 text-center">
+          <a rel="prev" class="prev-issue primary-text-color" href="../../03/31/issue-8.html">Mar 31</a>
+
+          <a rel="next" class="next-issue primary-text-color" href="../14/issue-10.html">Apr 14</a>
+
+        <h2 class="content-title primary-text-color">
+          <a href="issue-9.html">Apr  7 2016</a>
+        </h2>
+
+          <h3 class="content-subtitle">
+            <a href="issue-9.html"> — Issue #9</a>
+          </h3>
+
+        <hr class="content-seperator">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6 text-center landing-site-email-content">
+          
+    <center class="wrapper" style="width:100%;table-layout:fixed;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%">
+      <div class="webkit" style="max-width:600px;margin:0 auto">
+        <!--[if (gte mso 9)|(IE)]>
+          <table width="600" align="center" style="border-spacing:0;font-family:sans-serif;color:#333333;">
+          <tr>
+          <td style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
+          <![endif]-->
+          <table class="outer" align="center" style="border-spacing:0;font-family:sans-serif;color:#333333;Margin:0 auto;width:100%;max-width:600px">
+
+            <!-- Header Links -->
+            <tr>
+              <td class="header-links" style="padding:0;text-align:left;font-size:0">
+                <!--[if (gte mso 9)|(IE)]>
+                  <table width="100%" dir="ltr" style="border-spacing:0;font-family:sans-serif;color:#333333;">
+                  <tr>
+                  <td width="440" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
+                  <![endif]-->
+                  <div class="column left" dir="ltr" style="width:100%;display:inline-block;vertical-align:middle;max-width:440px">
+                    <table width="100%" style="border-spacing:0;font-family:sans-serif;color:#333333">
+                      <tr>
+                        <td class="inner contents" style="padding:0;padding:10px;width:100%;font-size:14px;text-align:left">
+                          
+                            Issue #9
+                          
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                  <!--[if (gte mso 9)|(IE)]>
+                    </td><td width="160" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
+                    <![endif]-->
+                    
+                    <!--[if (gte mso 9)|(IE)]>
+                      </td>
+                      </tr>
+                      </table>
+                      <![endif]-->
+              </td>
+            </tr>
+
+            <!-- Header -->
+            <tr>
+              <td class="one-column banner-title" style="padding:0;Margin-bottom:10px">
+                <table width="100%" style="border-spacing:0;font-family:sans-serif;color:#333333">
+                  <tr>
+                    <td class="inner contents" style="padding:0;padding:10px;width:100%;text-align:left">
+                      
+                        <img id="logo-url" src="/uploads/newsletter_settings/logo/6764/6664db48-5905-4609-b5f5-66f340d9fbc5.png" alt="Logo for Elm Weekly" width="100%" style="border:0">
+                      
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr>
+  <td class="one-column" style="padding:0;Margin-bottom:10px">
+    <table width="100%" style="border-spacing:0;font-family:sans-serif;color:#333333">
+      <tr>
+        <td class="inner contents text-block" style="padding:0;padding:10px;width:100%;text-align:left">
+          <p style='-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizeLegibility;font-family:"Helvetica", "Arial", sans-serif;font-style:normal;line-height:1.3;Margin:0;font-size:15px;line-height:22px;font-weight:300;Margin-bottom:10px;color:#444'>A round up of what’s happening in the wonderful world of the <strong>Elm</strong> programming language. Signal forwarded to your mailbox every Thursday in one digestible package.</p>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+
+
+            <!-- links / content -->
+            
+              <!-- Section Title -->
+              
+                <tr>
+  <td class="one-column section-title" style="padding:0;Margin-bottom:10px">
+    <table width="100%" style="border-spacing:0;font-family:sans-serif;color:#333333">
+      <tr>
+        <td class="inner contents" style="padding:0;padding:10px;width:100%;text-align:left">
+          <p class="h2 text-left" style='-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizeLegibility;font-family:"Helvetica", "Arial", sans-serif;font-style:normal;line-height:1.3;Margin:0;font-size:15px;line-height:22px;font-weight:300;Margin-bottom:10px;color:#444;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizeLegibility;font-family:"Helvetica", "Arial", sans-serif;font-style:normal;line-height:1.3;font-size:24px;text-align:left;color:#293c4b;border-bottom:1px solid #e3e3e3;border-color:#C0D7E3 !important;color:#293c4b !important'>Reading</p>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+
+              
+
+              <!-- Text block -->
+              
+
+              <!-- Link -->
+              
+
+            
+              <!-- Section Title -->
+              
+
+              <!-- Text block -->
+              
+
+              <!-- Link -->
+              
+                
+                  <tr>
+                    <td class="inline-link" style="padding:0;text-align:center;font-size:0">
+                      <!--[if (gte mso 9)|(IE)]>
+                        <table width="100%" style="border-spacing:0;font-family:sans-serif;color:#333333;">
+                        <tr>
+                        <td width="140" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
+                        <![endif]-->
+                        <div class="column left" style="width:100%;display:inline-block;vertical-align:top;max-width:140px">
+                          <table width="100%" style="border-spacing:0;font-family:sans-serif;color:#333333">
+                            <tr>
+                              <td class="inner" style="padding:0;padding:10px">
+                                
+                                  <a href="http://tech.noredink.com/post/142283641812/designing-meetups-to-build-better-communities" style="color:#2199e8;text-decoration:none;color:#60b5cc !important" target="_blank"><img src="/uploads/link/thumbnail/3239324/80980607-6dab-485f-8dfb-40819cb31461.jpg" alt="Designing Meetups to Build Better Communities" width="120" style="border:0"></a>
+                                
+                              </td>
+                            </tr>
+                          </table>
+                        </div>
+                        <!--[if (gte mso 9)|(IE)]>
+                          </td><td width="460" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
+                          <![endif]-->
+                          <div class="column right" style="width:100%;display:inline-block;vertical-align:top;max-width:460px">
+                            <table width="100%" style="border-spacing:0;font-family:sans-serif;color:#333333">
+                              <tr>
+                                <td class="inner contents" style="padding:0;padding:10px;width:100%;text-align:left">
+                                  <p class="h5" style='-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizeLegibility;font-family:"Helvetica", "Arial", sans-serif;font-style:normal;line-height:1.3;Margin:0;font-size:15px;line-height:22px;font-weight:300;Margin-bottom:10px;color:#444;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizeLegibility;font-family:"Helvetica", "Arial", sans-serif;font-style:normal;line-height:1.3;font-size:16px;color:#293c4b'><a href="http://tech.noredink.com/post/142283641812/designing-meetups-to-build-better-communities" style="color:#2199e8;text-decoration:none;color:#60b5cc !important" target="_blank">Designing Meetups to Build Better Communities</a></p>
+                                  <p style='-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizeLegibility;font-family:"Helvetica", "Arial", sans-serif;font-style:normal;line-height:1.3;Margin:0;font-size:15px;line-height:22px;font-weight:300;Margin-bottom:10px;color:#444'>Switching from Presentations to Hack Nights The number of tech meetups in San Francisco is pretty insane. You could probably eat free pizza every night of the week if that was your thing.Despite the...</p>
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                          <!--[if (gte mso 9)|(IE)]>
+                            </td>
+                            </tr>
+                            </table>
+                            <![endif]-->
+                    </td>
+                  </tr>
+                 <!-- has image -->
+              
+
+            
+              <!-- Section Title -->
+              
+
+              <!-- Text block -->
+              
+
+              <!-- Link -->
+              
+                
+                  <tr>
+                    <td class="one-column" style="padding:0;Margin-bottom:10px">
+                      <table width="100%" style="border-spacing:0;font-family:sans-serif;color:#333333">
+                        <tr>
+                          <td class="inner contents" style="padding:0;padding:10px;width:100%;text-align:left">
+                            <p class="h5" style='-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizeLegibility;font-family:"Helvetica", "Arial", sans-serif;font-style:normal;line-height:1.3;Margin:0;font-size:15px;line-height:22px;font-weight:300;Margin-bottom:10px;color:#444;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizeLegibility;font-family:"Helvetica", "Arial", sans-serif;font-style:normal;line-height:1.3;font-size:16px;color:#293c4b'><a href="http://rundis.github.io/blog/2016/elm_maybe.html" style="color:#2199e8;text-decoration:none;color:#60b5cc !important" target="_blank">Elm Maybe - Dealing with null/Nothing</a></p>
+                            <p style='-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizeLegibility;font-family:"Helvetica", "Arial", sans-serif;font-style:normal;line-height:1.3;Margin:0;font-size:15px;line-height:22px;font-weight:300;Margin-bottom:10px;color:#444'></p>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                 <!-- has image -->
+              
+
+            
+              <!-- Section Title -->
+              
+
+              <!-- Text block -->
+              
+
+              <!-- Link -->
+              
+                
+                  <tr>
+                    <td class="inline-link" style="padding:0;text-align:center;font-size:0">
+                      <!--[if (gte mso 9)|(IE)]>
+                        <table width="100%" style="border-spacing:0;font-family:sans-serif;color:#333333;">
+                        <tr>
+                        <td width="140" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
+                        <![endif]-->
+                        <div class="column left" style="width:100%;display:inline-block;vertical-align:top;max-width:140px">
+                          <table width="100%" style="border-spacing:0;font-family:sans-serif;color:#333333">
+                            <tr>
+                              <td class="inner" style="padding:0;padding:10px">
+                                
+                                  <a href="http://elmbranches.com/currying-and-pipes-in-elm/" style="color:#2199e8;text-decoration:none;color:#60b5cc !important" target="_blank"><img src="/uploads/link/thumbnail/3247638/bab12c51-6f92-494b-a47c-a7c4045c5447.jpg" alt="Currying And Pipes In Elm – Elm Branches" width="120" style="border:0"></a>
+                                
+                              </td>
+                            </tr>
+                          </table>
+                        </div>
+                        <!--[if (gte mso 9)|(IE)]>
+                          </td><td width="460" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
+                          <![endif]-->
+                          <div class="column right" style="width:100%;display:inline-block;vertical-align:top;max-width:460px">
+                            <table width="100%" style="border-spacing:0;font-family:sans-serif;color:#333333">
+                              <tr>
+                                <td class="inner contents" style="padding:0;padding:10px;width:100%;text-align:left">
+                                  <p class="h5" style='-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizeLegibility;font-family:"Helvetica", "Arial", sans-serif;font-style:normal;line-height:1.3;Margin:0;font-size:15px;line-height:22px;font-weight:300;Margin-bottom:10px;color:#444;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizeLegibility;font-family:"Helvetica", "Arial", sans-serif;font-style:normal;line-height:1.3;font-size:16px;color:#293c4b'><a href="http://elmbranches.com/currying-and-pipes-in-elm/" style="color:#2199e8;text-decoration:none;color:#60b5cc !important" target="_blank">Currying And Pipes In Elm – Elm Branches</a></p>
+                                  <p style='-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizeLegibility;font-family:"Helvetica", "Arial", sans-serif;font-style:normal;line-height:1.3;Margin:0;font-size:15px;line-height:22px;font-weight:300;Margin-bottom:10px;color:#444'>I’d been reading up on currying and other functional goodness at Professor Frisby’s Mostly Adequate Guide To Functional Programming. There’s great stuff here, I highly recommend i…</p>
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                          <!--[if (gte mso 9)|(IE)]>
+                            </td>
+                            </tr>
+                            </table>
+                            <![endif]-->
+                    </td>
+                  </tr>
+                 <!-- has image -->
+              
+
+            
+              <!-- Section Title -->
+              
+
+              <!-- Text block -->
+              
+
+              <!-- Link -->
+              
+                
+                  <tr>
+                    <td class="inline-link" style="padding:0;text-align:center;font-size:0">
+                      <!--[if (gte mso 9)|(IE)]>
+                        <table width="100%" style="border-spacing:0;font-family:sans-serif;color:#333333;">
+                        <tr>
+                        <td width="140" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
+                        <![endif]-->
+                        <div class="column left" style="width:100%;display:inline-block;vertical-align:top;max-width:140px">
+                          <table width="100%" style="border-spacing:0;font-family:sans-serif;color:#333333">
+                            <tr>
+                              <td class="inner" style="padding:0;padding:10px">
+                                
+                                  <a href="https://github.com/NoRedInk/elm-style-guide" style="color:#2199e8;text-decoration:none;color:#60b5cc !important" target="_blank"><img src="/uploads/link/thumbnail/3247582/3eced975-c336-41a8-9a82-30ddad808e82.png" alt="NoRedInk Elm Style Guide" width="120" style="border:0"></a>
+                                
+                              </td>
+                            </tr>
+                          </table>
+                        </div>
+                        <!--[if (gte mso 9)|(IE)]>
+                          </td><td width="460" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
+                          <![endif]-->
+                          <div class="column right" style="width:100%;display:inline-block;vertical-align:top;max-width:460px">
+                            <table width="100%" style="border-spacing:0;font-family:sans-serif;color:#333333">
+                              <tr>
+                                <td class="inner contents" style="padding:0;padding:10px;width:100%;text-align:left">
+                                  <p class="h5" style='-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizeLegibility;font-family:"Helvetica", "Arial", sans-serif;font-style:normal;line-height:1.3;Margin:0;font-size:15px;line-height:22px;font-weight:300;Margin-bottom:10px;color:#444;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizeLegibility;font-family:"Helvetica", "Arial", sans-serif;font-style:normal;line-height:1.3;font-size:16px;color:#293c4b'><a href="https://github.com/NoRedInk/elm-style-guide" style="color:#2199e8;text-decoration:none;color:#60b5cc !important" target="_blank">NoRedInk Elm Style Guide</a></p>
+                                  <p style='-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizeLegibility;font-family:"Helvetica", "Arial", sans-serif;font-style:normal;line-height:1.3;Margin:0;font-size:15px;line-height:22px;font-weight:300;Margin-bottom:10px;color:#444'>elm-style-guide - NoRedInk style guide for our Elm code</p>
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                          <!--[if (gte mso 9)|(IE)]>
+                            </td>
+                            </tr>
+                            </table>
+                            <![endif]-->
+                    </td>
+                  </tr>
+                 <!-- has image -->
+              
+
+            
+              <!-- Section Title -->
+              
+                <tr>
+  <td class="one-column section-title" style="padding:0;Margin-bottom:10px">
+    <table width="100%" style="border-spacing:0;font-family:sans-serif;color:#333333">
+      <tr>
+        <td class="inner contents" style="padding:0;padding:10px;width:100%;text-align:left">
+          <p class="h2 text-left" style='-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizeLegibility;font-family:"Helvetica", "Arial", sans-serif;font-style:normal;line-height:1.3;Margin:0;font-size:15px;line-height:22px;font-weight:300;Margin-bottom:10px;color:#444;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizeLegibility;font-family:"Helvetica", "Arial", sans-serif;font-style:normal;line-height:1.3;font-size:24px;text-align:left;color:#293c4b;border-bottom:1px solid #e3e3e3;border-color:#C0D7E3 !important;color:#293c4b !important'>Watching &amp; Listening</p>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+
+              
+
+              <!-- Text block -->
+              
+
+              <!-- Link -->
+              
+
+            
+              <!-- Section Title -->
+              
+
+              <!-- Text block -->
+              
+
+              <!-- Link -->
+              
+                
+                  <tr>
+                    <td class="inline-link" style="padding:0;text-align:center;font-size:0">
+                      <!--[if (gte mso 9)|(IE)]>
+                        <table width="100%" style="border-spacing:0;font-family:sans-serif;color:#333333;">
+                        <tr>
+                        <td width="140" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
+                        <![endif]-->
+                        <div class="column left" style="width:100%;display:inline-block;vertical-align:top;max-width:140px">
+                          <table width="100%" style="border-spacing:0;font-family:sans-serif;color:#333333">
+                            <tr>
+                              <td class="inner" style="padding:0;padding:10px">
+                                
+                                  <a href="https://www.youtube.com/watch?v=NgwQHGqIMbw&amp;feature=youtu.be" style="color:#2199e8;text-decoration:none;color:#60b5cc !important" target="_blank"><img src="/uploads/link/thumbnail/3242060/02f35bbe-e3a1-429d-b9fd-4f9ebff03ad7.jpg" alt="From jQuery to Flux to Elm" width="120" style="border:0"></a>
+                                
+                              </td>
+                            </tr>
+                          </table>
+                        </div>
+                        <!--[if (gte mso 9)|(IE)]>
+                          </td><td width="460" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
+                          <![endif]-->
+                          <div class="column right" style="width:100%;display:inline-block;vertical-align:top;max-width:460px">
+                            <table width="100%" style="border-spacing:0;font-family:sans-serif;color:#333333">
+                              <tr>
+                                <td class="inner contents" style="padding:0;padding:10px;width:100%;text-align:left">
+                                  <p class="h5" style='-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizeLegibility;font-family:"Helvetica", "Arial", sans-serif;font-style:normal;line-height:1.3;Margin:0;font-size:15px;line-height:22px;font-weight:300;Margin-bottom:10px;color:#444;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizeLegibility;font-family:"Helvetica", "Arial", sans-serif;font-style:normal;line-height:1.3;font-size:16px;color:#293c4b'><a href="https://www.youtube.com/watch?v=NgwQHGqIMbw&amp;feature=youtu.be" style="color:#2199e8;text-decoration:none;color:#60b5cc !important" target="_blank">From jQuery to Flux to Elm</a></p>
+                                  <p style='-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizeLegibility;font-family:"Helvetica", "Arial", sans-serif;font-style:normal;line-height:1.3;Margin:0;font-size:15px;line-height:22px;font-weight:300;Margin-bottom:10px;color:#444'>Front-end architecture has evolved greatly since the era of jQuery's dominance. React popularized the Virtual DOM rendering model, Flux did the same with uni...</p>
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                          <!--[if (gte mso 9)|(IE)]>
+                            </td>
+                            </tr>
+                            </table>
+                            <![endif]-->
+                    </td>
+                  </tr>
+                 <!-- has image -->
+              
+
+            
+              <!-- Section Title -->
+              
+
+              <!-- Text block -->
+              
+
+              <!-- Link -->
+              
+                
+                  <tr>
+                    <td class="inline-link" style="padding:0;text-align:center;font-size:0">
+                      <!--[if (gte mso 9)|(IE)]>
+                        <table width="100%" style="border-spacing:0;font-family:sans-serif;color:#333333;">
+                        <tr>
+                        <td width="140" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
+                        <![endif]-->
+                        <div class="column left" style="width:100%;display:inline-block;vertical-align:top;max-width:140px">
+                          <table width="100%" style="border-spacing:0;font-family:sans-serif;color:#333333">
+                            <tr>
+                              <td class="inner" style="padding:0;padding:10px">
+                                
+                                  <a href="https://www.youtube.com/watch?v=3_M2G9U51GA" style="color:#2199e8;text-decoration:none;color:#60b5cc !important" target="_blank"><img src="/uploads/link/thumbnail/3247144/69b41aa1-c527-4338-befb-fbe6647dd637.jpg" alt="Introduction to Elm" width="120" style="border:0"></a>
+                                
+                              </td>
+                            </tr>
+                          </table>
+                        </div>
+                        <!--[if (gte mso 9)|(IE)]>
+                          </td><td width="460" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
+                          <![endif]-->
+                          <div class="column right" style="width:100%;display:inline-block;vertical-align:top;max-width:460px">
+                            <table width="100%" style="border-spacing:0;font-family:sans-serif;color:#333333">
+                              <tr>
+                                <td class="inner contents" style="padding:0;padding:10px;width:100%;text-align:left">
+                                  <p class="h5" style='-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizeLegibility;font-family:"Helvetica", "Arial", sans-serif;font-style:normal;line-height:1.3;Margin:0;font-size:15px;line-height:22px;font-weight:300;Margin-bottom:10px;color:#444;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizeLegibility;font-family:"Helvetica", "Arial", sans-serif;font-style:normal;line-height:1.3;font-size:16px;color:#293c4b'><a href="https://www.youtube.com/watch?v=3_M2G9U51GA" style="color:#2199e8;text-decoration:none;color:#60b5cc !important" target="_blank">Introduction to Elm</a></p>
+                                  <p style='-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizeLegibility;font-family:"Helvetica", "Arial", sans-serif;font-style:normal;line-height:1.3;Margin:0;font-size:15px;line-height:22px;font-weight:300;Margin-bottom:10px;color:#444'>Elm is a cutting-edge functional programming language that you can use instead of JavaScript - or alongside it. It takes the concepts in React and Redux to a...</p>
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                          <!--[if (gte mso 9)|(IE)]>
+                            </td>
+                            </tr>
+                            </table>
+                            <![endif]-->
+                    </td>
+                  </tr>
+                 <!-- has image -->
+              
+
+            
+              <!-- Section Title -->
+              
+
+              <!-- Text block -->
+              
+
+              <!-- Link -->
+              
+                
+                  <tr>
+                    <td class="inline-link" style="padding:0;text-align:center;font-size:0">
+                      <!--[if (gte mso 9)|(IE)]>
+                        <table width="100%" style="border-spacing:0;font-family:sans-serif;color:#333333;">
+                        <tr>
+                        <td width="140" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
+                        <![endif]-->
+                        <div class="column left" style="width:100%;display:inline-block;vertical-align:top;max-width:140px">
+                          <table width="100%" style="border-spacing:0;font-family:sans-serif;color:#333333">
+                            <tr>
+                              <td class="inner" style="padding:0;padding:10px">
+                                
+                                  <a href="http://unsoundscapes.com/slides/2016-04-06-creating-a-fun-game-with-elm/" style="color:#2199e8;text-decoration:none;color:#60b5cc !important" target="_blank"><img src="/uploads/link/thumbnail/3247147/223bec5e-d72d-4620-bf68-716e6d2e71f9.png" alt="Creating a Fun Game With Elm" width="120" style="border:0"></a>
+                                
+                              </td>
+                            </tr>
+                          </table>
+                        </div>
+                        <!--[if (gte mso 9)|(IE)]>
+                          </td><td width="460" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
+                          <![endif]-->
+                          <div class="column right" style="width:100%;display:inline-block;vertical-align:top;max-width:460px">
+                            <table width="100%" style="border-spacing:0;font-family:sans-serif;color:#333333">
+                              <tr>
+                                <td class="inner contents" style="padding:0;padding:10px;width:100%;text-align:left">
+                                  <p class="h5" style='-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizeLegibility;font-family:"Helvetica", "Arial", sans-serif;font-style:normal;line-height:1.3;Margin:0;font-size:15px;line-height:22px;font-weight:300;Margin-bottom:10px;color:#444;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizeLegibility;font-family:"Helvetica", "Arial", sans-serif;font-style:normal;line-height:1.3;font-size:16px;color:#293c4b'><a href="http://unsoundscapes.com/slides/2016-04-06-creating-a-fun-game-with-elm/" style="color:#2199e8;text-decoration:none;color:#60b5cc !important" target="_blank">Creating a Fun Game With Elm</a></p>
+                                  <p style='-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizeLegibility;font-family:"Helvetica", "Arial", sans-serif;font-style:normal;line-height:1.3;Margin:0;font-size:15px;line-height:22px;font-weight:300;Margin-bottom:10px;color:#444'></p>
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                          <!--[if (gte mso 9)|(IE)]>
+                            </td>
+                            </tr>
+                            </table>
+                            <![endif]-->
+                    </td>
+                  </tr>
+                 <!-- has image -->
+              
+
+            
+              <!-- Section Title -->
+              
+                <tr>
+  <td class="one-column section-title" style="padding:0;Margin-bottom:10px">
+    <table width="100%" style="border-spacing:0;font-family:sans-serif;color:#333333">
+      <tr>
+        <td class="inner contents" style="padding:0;padding:10px;width:100%;text-align:left">
+          <p class="h2 text-left" style='-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizeLegibility;font-family:"Helvetica", "Arial", sans-serif;font-style:normal;line-height:1.3;Margin:0;font-size:15px;line-height:22px;font-weight:300;Margin-bottom:10px;color:#444;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizeLegibility;font-family:"Helvetica", "Arial", sans-serif;font-style:normal;line-height:1.3;font-size:24px;text-align:left;color:#293c4b;border-bottom:1px solid #e3e3e3;border-color:#C0D7E3 !important;color:#293c4b !important'>Code</p>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+
+              
+
+              <!-- Text block -->
+              
+
+              <!-- Link -->
+              
+
+            
+              <!-- Section Title -->
+              
+
+              <!-- Text block -->
+              
+
+              <!-- Link -->
+              
+                
+                  <tr>
+                    <td class="one-column" style="padding:0;Margin-bottom:10px">
+                      <table width="100%" style="border-spacing:0;font-family:sans-serif;color:#333333">
+                        <tr>
+                          <td class="inner contents" style="padding:0;padding:10px;width:100%;text-align:left">
+                            <p class="h5" style='-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizeLegibility;font-family:"Helvetica", "Arial", sans-serif;font-style:normal;line-height:1.3;Margin:0;font-size:15px;line-height:22px;font-weight:300;Margin-bottom:10px;color:#444;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizeLegibility;font-family:"Helvetica", "Arial", sans-serif;font-style:normal;line-height:1.3;font-size:16px;color:#293c4b'><a href="http://exercism.io/languages/elm" style="color:#2199e8;text-decoration:none;color:#60b5cc !important" target="_blank">Code Exercises in ELm</a></p>
+                            <p style='-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizeLegibility;font-family:"Helvetica", "Arial", sans-serif;font-style:normal;line-height:1.3;Margin:0;font-size:15px;line-height:22px;font-weight:300;Margin-bottom:10px;color:#444'>Practice having thoughtful conversations about code.</p>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                 <!-- has image -->
+              
+
+            
+              <!-- Section Title -->
+              
+
+              <!-- Text block -->
+              
+
+              <!-- Link -->
+              
+                
+                  <tr>
+                    <td class="one-column" style="padding:0;Margin-bottom:10px">
+                      <table width="100%" style="border-spacing:0;font-family:sans-serif;color:#333333">
+                        <tr>
+                          <td class="inner contents" style="padding:0;padding:10px;width:100%;text-align:left">
+                            <p class="h5" style='-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizeLegibility;font-family:"Helvetica", "Arial", sans-serif;font-style:normal;line-height:1.3;Margin:0;font-size:15px;line-height:22px;font-weight:300;Margin-bottom:10px;color:#444;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizeLegibility;font-family:"Helvetica", "Arial", sans-serif;font-style:normal;line-height:1.3;font-size:16px;color:#293c4b'><a href="http://joshuaclayton.me/investments-elm/" style="color:#2199e8;text-decoration:none;color:#60b5cc !important" target="_blank">Investments</a></p>
+                            <p style='-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizeLegibility;font-family:"Helvetica", "Arial", sans-serif;font-style:normal;line-height:1.3;Margin:0;font-size:15px;line-height:22px;font-weight:300;Margin-bottom:10px;color:#444'></p>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                 <!-- has image -->
+              
+
+            
+              <!-- Section Title -->
+              
+
+              <!-- Text block -->
+              
+
+              <!-- Link -->
+              
+                
+                  <tr>
+                    <td class="one-column" style="padding:0;Margin-bottom:10px">
+                      <table width="100%" style="border-spacing:0;font-family:sans-serif;color:#333333">
+                        <tr>
+                          <td class="inner contents" style="padding:0;padding:10px;width:100%;text-align:left">
+                            <p class="h5" style='-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizeLegibility;font-family:"Helvetica", "Arial", sans-serif;font-style:normal;line-height:1.3;Margin:0;font-size:15px;line-height:22px;font-weight:300;Margin-bottom:10px;color:#444;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizeLegibility;font-family:"Helvetica", "Arial", sans-serif;font-style:normal;line-height:1.3;font-size:16px;color:#293c4b'><a href="http://www.simonewebdesign.it/demo/elm/" style="color:#2199e8;text-decoration:none;color:#60b5cc !important" target="_blank">Credit Card Checkout</a></p>
+                            <p style='-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizeLegibility;font-family:"Helvetica", "Arial", sans-serif;font-style:normal;line-height:1.3;Margin:0;font-size:15px;line-height:22px;font-weight:300;Margin-bottom:10px;color:#444'></p>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                 <!-- has image -->
+              
+
+            
+              <!-- Section Title -->
+              
+
+              <!-- Text block -->
+              
+
+              <!-- Link -->
+              
+                
+                  <tr>
+                    <td class="inline-link" style="padding:0;text-align:center;font-size:0">
+                      <!--[if (gte mso 9)|(IE)]>
+                        <table width="100%" style="border-spacing:0;font-family:sans-serif;color:#333333;">
+                        <tr>
+                        <td width="140" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
+                        <![endif]-->
+                        <div class="column left" style="width:100%;display:inline-block;vertical-align:top;max-width:140px">
+                          <table width="100%" style="border-spacing:0;font-family:sans-serif;color:#333333">
+                            <tr>
+                              <td class="inner" style="padding:0;padding:10px">
+                                
+                                  <a href="https://github.com/harjuto/elmentary" style="color:#2199e8;text-decoration:none;color:#60b5cc !important" target="_blank"><img src="/uploads/link/thumbnail/3235960/faa05c16-6e42-413d-9639-4640faf63be3.jpeg" alt="Elmentary" width="120" style="border:0"></a>
+                                
+                              </td>
+                            </tr>
+                          </table>
+                        </div>
+                        <!--[if (gte mso 9)|(IE)]>
+                          </td><td width="460" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
+                          <![endif]-->
+                          <div class="column right" style="width:100%;display:inline-block;vertical-align:top;max-width:460px">
+                            <table width="100%" style="border-spacing:0;font-family:sans-serif;color:#333333">
+                              <tr>
+                                <td class="inner contents" style="padding:0;padding:10px;width:100%;text-align:left">
+                                  <p class="h5" style='-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizeLegibility;font-family:"Helvetica", "Arial", sans-serif;font-style:normal;line-height:1.3;Margin:0;font-size:15px;line-height:22px;font-weight:300;Margin-bottom:10px;color:#444;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizeLegibility;font-family:"Helvetica", "Arial", sans-serif;font-style:normal;line-height:1.3;font-size:16px;color:#293c4b'><a href="https://github.com/harjuto/elmentary" style="color:#2199e8;text-decoration:none;color:#60b5cc !important" target="_blank">Elmentary</a></p>
+                                  <p style='-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizeLegibility;font-family:"Helvetica", "Arial", sans-serif;font-style:normal;line-height:1.3;Margin:0;font-size:15px;line-height:22px;font-weight:300;Margin-bottom:10px;color:#444'>elmentary - Planetary music box written with Elm</p>
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                          <!--[if (gte mso 9)|(IE)]>
+                            </td>
+                            </tr>
+                            </table>
+                            <![endif]-->
+                    </td>
+                  </tr>
+                 <!-- has image -->
+              
+
+            
+              <!-- Section Title -->
+              
+
+              <!-- Text block -->
+              
+
+              <!-- Link -->
+              
+                
+                  <tr>
+                    <td class="one-column" style="padding:0;Margin-bottom:10px">
+                      <table width="100%" style="border-spacing:0;font-family:sans-serif;color:#333333">
+                        <tr>
+                          <td class="inner contents" style="padding:0;padding:10px;width:100%;text-align:left">
+                            <p class="h5" style='-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizeLegibility;font-family:"Helvetica", "Arial", sans-serif;font-style:normal;line-height:1.3;Margin:0;font-size:15px;line-height:22px;font-weight:300;Margin-bottom:10px;color:#444;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizeLegibility;font-family:"Helvetica", "Arial", sans-serif;font-style:normal;line-height:1.3;font-size:16px;color:#293c4b'><a href="http://package.elm-lang.org/packages/NoRedInk/elm-decode-pipeline/1.0.0/" style="color:#2199e8;text-decoration:none;color:#60b5cc !important" target="_blank">Release: elm-decode-pipeline 1.0.0</a></p>
+                            <p style='-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizeLegibility;font-family:"Helvetica", "Arial", sans-serif;font-style:normal;line-height:1.3;Margin:0;font-size:15px;line-height:22px;font-weight:300;Margin-bottom:10px;color:#444'></p>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                 <!-- has image -->
+              
+
+            
+              <!-- Section Title -->
+              
+                <tr>
+  <td class="one-column section-title" style="padding:0;Margin-bottom:10px">
+    <table width="100%" style="border-spacing:0;font-family:sans-serif;color:#333333">
+      <tr>
+        <td class="inner contents" style="padding:0;padding:10px;width:100%;text-align:left">
+          <p class="h2 text-left" style='-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizeLegibility;font-family:"Helvetica", "Arial", sans-serif;font-style:normal;line-height:1.3;Margin:0;font-size:15px;line-height:22px;font-weight:300;Margin-bottom:10px;color:#444;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizeLegibility;font-family:"Helvetica", "Arial", sans-serif;font-style:normal;line-height:1.3;font-size:24px;text-align:left;color:#293c4b;border-bottom:1px solid #e3e3e3;border-color:#C0D7E3 !important;color:#293c4b !important'>Meetups, Conferences &amp; Events</p>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+
+              
+
+              <!-- Text block -->
+              
+
+              <!-- Link -->
+              
+
+            
+              <!-- Section Title -->
+              
+
+              <!-- Text block -->
+              
+                <tr>
+  <td class="one-column" style="padding:0;Margin-bottom:10px">
+    <table width="100%" style="border-spacing:0;font-family:sans-serif;color:#333333">
+      <tr>
+        <td class="inner contents text-block" style="padding:0;padding:10px;width:100%;text-align:left">
+          <p style='-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizeLegibility;font-family:"Helvetica", "Arial", sans-serif;font-style:normal;line-height:1.3;Margin:0;font-size:15px;line-height:22px;font-weight:300;Margin-bottom:10px;color:#444'>The <strong>Elm London Meetup</strong> are looking for speakers for their May 17th event. Get in touch via their <a href="http://www.meetup.com/Elm-London-Meetup/events/230116256/" style="color:#2199e8;text-decoration:none;color:#60b5cc !important" target="_blank">Meetup Page</a> or contact <strong>Kris Jenkins</strong> directly (<a href="https://twitter.com/krisajenkins" style="color:#2199e8;text-decoration:none;color:#60b5cc !important" target="_blank">@krisajenkins</a>) if you’d like to deliver a talk.</p>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+
+              
+
+              <!-- Link -->
+              
+
+            
+              <!-- Section Title -->
+              
+
+              <!-- Text block -->
+              
+
+              <!-- Link -->
+              
+                
+                  <tr>
+                    <td class="inline-link" style="padding:0;text-align:center;font-size:0">
+                      <!--[if (gte mso 9)|(IE)]>
+                        <table width="100%" style="border-spacing:0;font-family:sans-serif;color:#333333;">
+                        <tr>
+                        <td width="140" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
+                        <![endif]-->
+                        <div class="column left" style="width:100%;display:inline-block;vertical-align:top;max-width:140px">
+                          <table width="100%" style="border-spacing:0;font-family:sans-serif;color:#333333">
+                            <tr>
+                              <td class="inner" style="padding:0;padding:10px">
+                                
+                                  <a href="http://2016.phillyemergingtech.com/session/adventures-in-elm-events-reproducibility-and-kindness/" style="color:#2199e8;text-decoration:none;color:#60b5cc !important" target="_blank"><img src="/uploads/link/thumbnail/3247290/b446a97b-b61a-484f-9fb6-fea0f7532218.png" alt="Adventures in Elm: Events, Reproducibility, and Kindness" width="120" style="border:0"></a>
+                                
+                              </td>
+                            </tr>
+                          </table>
+                        </div>
+                        <!--[if (gte mso 9)|(IE)]>
+                          </td><td width="460" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
+                          <![endif]-->
+                          <div class="column right" style="width:100%;display:inline-block;vertical-align:top;max-width:460px">
+                            <table width="100%" style="border-spacing:0;font-family:sans-serif;color:#333333">
+                              <tr>
+                                <td class="inner contents" style="padding:0;padding:10px;width:100%;text-align:left">
+                                  <p class="h5" style='-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizeLegibility;font-family:"Helvetica", "Arial", sans-serif;font-style:normal;line-height:1.3;Margin:0;font-size:15px;line-height:22px;font-weight:300;Margin-bottom:10px;color:#444;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizeLegibility;font-family:"Helvetica", "Arial", sans-serif;font-style:normal;line-height:1.3;font-size:16px;color:#293c4b'><a href="http://2016.phillyemergingtech.com/session/adventures-in-elm-events-reproducibility-and-kindness/" style="color:#2199e8;text-decoration:none;color:#60b5cc !important" target="_blank">Adventures in Elm: Events, Reproducibility, and Kindness</a></p>
+                                  <p style='-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizeLegibility;font-family:"Helvetica", "Arial", sans-serif;font-style:normal;line-height:1.3;Margin:0;font-size:15px;line-height:22px;font-weight:300;Margin-bottom:10px;color:#444'></p>
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                          <!--[if (gte mso 9)|(IE)]>
+                            </td>
+                            </tr>
+                            </table>
+                            <![endif]-->
+                    </td>
+                  </tr>
+                 <!-- has image -->
+              
+
+            
+              <!-- Section Title -->
+              
+
+              <!-- Text block -->
+              
+
+              <!-- Link -->
+              
+                
+                  <tr>
+                    <td class="inline-link" style="padding:0;text-align:center;font-size:0">
+                      <!--[if (gte mso 9)|(IE)]>
+                        <table width="100%" style="border-spacing:0;font-family:sans-serif;color:#333333;">
+                        <tr>
+                        <td width="140" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
+                        <![endif]-->
+                        <div class="column left" style="width:100%;display:inline-block;vertical-align:top;max-width:140px">
+                          <table width="100%" style="border-spacing:0;font-family:sans-serif;color:#333333">
+                            <tr>
+                              <td class="inner" style="padding:0;padding:10px">
+                                
+                                  <a href="http://www.meetup.com/London-JavaScript-Community/events/228773798/" style="color:#2199e8;text-decoration:none;color:#60b5cc !important" target="_blank"><img src="/uploads/link/thumbnail/3247139/4e5aa0cc-f7c6-4029-ae54-a26459895253.jpeg" alt="Elm, putting the fun in functional" width="120" style="border:0"></a>
+                                
+                              </td>
+                            </tr>
+                          </table>
+                        </div>
+                        <!--[if (gte mso 9)|(IE)]>
+                          </td><td width="460" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
+                          <![endif]-->
+                          <div class="column right" style="width:100%;display:inline-block;vertical-align:top;max-width:460px">
+                            <table width="100%" style="border-spacing:0;font-family:sans-serif;color:#333333">
+                              <tr>
+                                <td class="inner contents" style="padding:0;padding:10px;width:100%;text-align:left">
+                                  <p class="h5" style='-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizeLegibility;font-family:"Helvetica", "Arial", sans-serif;font-style:normal;line-height:1.3;Margin:0;font-size:15px;line-height:22px;font-weight:300;Margin-bottom:10px;color:#444;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizeLegibility;font-family:"Helvetica", "Arial", sans-serif;font-style:normal;line-height:1.3;font-size:16px;color:#293c4b'><a href="http://www.meetup.com/London-JavaScript-Community/events/228773798/" style="color:#2199e8;text-decoration:none;color:#60b5cc !important" target="_blank">Elm, putting the fun in functional</a></p>
+                                  <p style='-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizeLegibility;font-family:"Helvetica", "Arial", sans-serif;font-style:normal;line-height:1.3;Margin:0;font-size:15px;line-height:22px;font-weight:300;Margin-bottom:10px;color:#444'>Hi JSLoversAre you ready for a new webinar? This time we are going to have a special topic, ELM the functional programming language!Philip, our speaker, is going to present:Elm, putting the fun in </p>
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                          <!--[if (gte mso 9)|(IE)]>
+                            </td>
+                            </tr>
+                            </table>
+                            <![endif]-->
+                    </td>
+                  </tr>
+                 <!-- has image -->
+              
+
+            
+              <!-- Section Title -->
+              
+
+              <!-- Text block -->
+              
+                <tr>
+  <td class="one-column" style="padding:0;Margin-bottom:10px">
+    <table width="100%" style="border-spacing:0;font-family:sans-serif;color:#333333">
+      <tr>
+        <td class="inner contents text-block" style="padding:0;padding:10px;width:100%;text-align:left">
+          <p style='-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizeLegibility;font-family:"Helvetica", "Arial", sans-serif;font-style:normal;line-height:1.3;Margin:0;font-size:15px;line-height:22px;font-weight:300;Margin-bottom:10px;color:#444'>Friday 8th April, <strong>Helsinki</strong>, <a href="http://www.meetup.com/Futurice-WWWeeklies/events/229898830/" style="color:#2199e8;text-decoration:none;color:#60b5cc !important" target="_blank">Futurice WWWeeklies</a><br>
+Monday 11th April, <strong>Portland</strong>, <a href="http://www.meetup.com/portlandelm/events/228818726/" style="color:#2199e8;text-decoration:none;color:#60b5cc !important" target="_blank">Portland Elm</a><br>
+Wednesday 13th April, <strong>Milwaukee</strong>, <a href="http://www.meetup.com/mke-web-pros/events/230005900/" style="color:#2199e8;text-decoration:none;color:#60b5cc !important" target="_blank">MKE Web Pros</a><br>
+Tuesday 12th April, <strong>San Francisco</strong>, <a href="http://www.meetup.com/Elm-user-group-SF/events/229463790/" style="color:#2199e8;text-decoration:none;color:#60b5cc !important" target="_blank">San Francisco Elm Hack Night</a><br>
+Wednesday 13th April, <strong>Wellington, NZ</strong>, <a href="http://www.meetup.com/Elm-Wellington/events/229727824/" style="color:#2199e8;text-decoration:none;color:#60b5cc !important" target="_blank">Elm Wellington</a><br>
+Thursday 14th April, <strong>Utah</strong>, <a href="http://www.meetup.com/Utah-Elm-Users/events/229764589/" style="color:#2199e8;text-decoration:none;color:#60b5cc !important" target="_blank">Utah Elm Users</a></p>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+
+              
+
+              <!-- Link -->
+              
+
+            
+              <!-- Section Title -->
+              
+                <tr>
+  <td class="one-column section-title" style="padding:0;Margin-bottom:10px">
+    <table width="100%" style="border-spacing:0;font-family:sans-serif;color:#333333">
+      <tr>
+        <td class="inner contents" style="padding:0;padding:10px;width:100%;text-align:left">
+          <p class="h2 text-left" style='-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizeLegibility;font-family:"Helvetica", "Arial", sans-serif;font-style:normal;line-height:1.3;Margin:0;font-size:15px;line-height:22px;font-weight:300;Margin-bottom:10px;color:#444;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizeLegibility;font-family:"Helvetica", "Arial", sans-serif;font-style:normal;line-height:1.3;font-size:24px;text-align:left;color:#293c4b;border-bottom:1px solid #e3e3e3;border-color:#C0D7E3 !important;color:#293c4b !important'>Curator’s Corner</p>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+
+              
+
+              <!-- Text block -->
+              
+
+              <!-- Link -->
+              
+
+            
+              <!-- Section Title -->
+              
+
+              <!-- Text block -->
+              
+                <tr>
+  <td class="one-column" style="padding:0;Margin-bottom:10px">
+    <table width="100%" style="border-spacing:0;font-family:sans-serif;color:#333333">
+      <tr>
+        <td class="inner contents text-block" style="padding:0;padding:10px;width:100%;text-align:left">
+          <p style='-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizeLegibility;font-family:"Helvetica", "Arial", sans-serif;font-style:normal;line-height:1.3;Margin:0;font-size:15px;line-height:22px;font-weight:300;Margin-bottom:10px;color:#444'>I put together a new <a href="http://www.elmbark.com/elm-weekly" style="color:#2199e8;text-decoration:none;color:#60b5cc !important" target="_blank">Elm Weekly logo animation</a> with CSS thanks to <strong>Ian Ramos</strong>’ Elm Whale which is very cool. Also the London JS webinar above is also open to everyone, whether you’re in London or not (I won’t be!) so if you’re on a European time zone (lunch time) or even East Coast USA (breakfast) feel free to <a href="http://www.meetup.com/London-JavaScript-Community/events/228773798/" style="color:#2199e8;text-decoration:none;color:#60b5cc !important" target="_blank">sign up</a>.</p>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+
+              
+
+              <!-- Link -->
+              
+
+             <!-- End of each email items -->
+
+            <tr>
+  <td class="one-column" style="padding:0;Margin-bottom:10px">
+    <table width="100%" style="border-spacing:0;font-family:sans-serif;color:#333333">
+      <tr>
+        <td class="inner contents text-block" style="padding:0;padding:10px;width:100%;text-align:left">
+          <p style='-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizeLegibility;font-family:"Helvetica", "Arial", sans-serif;font-style:normal;line-height:1.3;Margin:0;font-size:15px;line-height:22px;font-weight:300;Margin-bottom:10px;color:#444'><em>Something I missed? Have something you’d like to submit for next week’s edition? Tweet <a href="https://twitter.com/elmweekly" style="color:#2199e8;text-decoration:none;color:#60b5cc !important" target="_blank">@elmweekly</a> with a link, send an email through to <a href="mailto:hello@elmweekly.nl" style="color:#2199e8;text-decoration:none;color:#60b5cc !important" target="_blank">hello@elmweekly.nl</a></em>, or just hit reply.</p>
+
+<p style='-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizeLegibility;font-family:"Helvetica", "Arial", sans-serif;font-style:normal;line-height:1.3;Margin:0;font-size:15px;line-height:22px;font-weight:300;Margin-bottom:10px;color:#444'>Enjoy Elm,</p>
+
+<p style='-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizeLegibility;font-family:"Helvetica", "Arial", sans-serif;font-style:normal;line-height:1.3;Margin:0;font-size:15px;line-height:22px;font-weight:300;Margin-bottom:10px;color:#444'><strong>Poots</strong></p>
+
+<p style='-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizeLegibility;font-family:"Helvetica", "Arial", sans-serif;font-style:normal;line-height:1.3;Margin:0;font-size:15px;line-height:22px;font-weight:300;Margin-bottom:10px;color:#444'><img src="https://avatars1.githubusercontent.com/u/35313?v=3&amp;u=b79ca616df712f13328b905bf7c202b723d0b817&amp;s=140" alt="Poots headshot" width="100%" style="border:0;display:block;width:100%;max-width:580px"></p>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+
+
+            
+
+            
+
+
+        </table>
+        <!--[if (gte mso 9)|(IE)]>
+          </td>
+          </tr>
+          </table>
+        <![endif]-->
+      </div>
+    </center>
+  <style type="text/css">
+  @media screen and (max-width: 400px) {
+	.two-column .column,
+	.three-column .column {
+		max-width: 100% !important;
+	}
+	.two-column img {
+		max-width: 100% !important;
+	}
+	.three-column img {
+		max-width: 50% !important;
+	}
+}
+  @media screen and (min-width: 401px) and (max-width: 620px) {
+	.three-column .column {
+		max-width: 33% !important;
+	}
+	.two-column .column {
+		max-width: 50% !important;
+	}
+}
+  @media only screen and (max-width: 620px) {
+  .small-float-center {
+    margin: 0 auto !important;
+    float: none !important;
+    text-align: center !important; }
+  .small-text-center {
+    text-align: center !important; }
+  .small-text-left {
+    text-align: left !important; }
+  .small-text-right {
+    text-align: right !important; } }
+  @media only screen and (max-width: 580px) {
+        .banner-title .h1 {
+          font-size: 28px!important;
+        }
+        .section-title .h2 {
+          font-size: 24px!important;
+        }
+      }
+</style>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6 text-center">
+          <a rel="prev" class="prev-issue primary-text-color" href="../../03/31/issue-8.html">Mar 31</a>
+
+        <a class="all-issues primary-text-color" href="../../../archive.html">Archive</a>
+
+          <a rel="next" class="next-issue primary-text-color" href="../14/issue-10.html">Apr 14</a>
+      </div>
+    </div>
+</div>
+
+      </div>
+
+        <footer>
+          <div class="row">
+            <div class="col-xs-offset-1 col-xs-10 col-md-offset-2 col-md-8 text-center">
+                <p>© 2016-2019 Elm Weekly</p>
+
+            </div>
+          </div>
+        </footer>
+    </div>
+
+    <script src="/assets/landing_sites_manifest-2a01badf00edc865538e6d9ff4327616.js"></script>
+      <script data-turbolinks-eval="false">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', "UA-73455144-1", 'auto');
+    ga('send', 'pageview');
+</script>
+
+  </body>
+</html>
